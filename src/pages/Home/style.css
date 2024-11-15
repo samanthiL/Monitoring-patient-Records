@@ -1,0 +1,31 @@
+.container{
+    padding: 90px;
+    margin: 0 auto;
+    justify-content: center;
+
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    padding: 81px;
+}
+
+.grid-container2{
+    width: 77% !important;
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+    gap: 5px;
+
+
+}
+.wrapper {
+        border: 1px solid;
+    display: grid;
+    grid-template-columns:150px 33px 150px 34px 39px 27px
+  }
+  
+  .section{
+ display: contents;
+  }
