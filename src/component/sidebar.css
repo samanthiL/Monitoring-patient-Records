@@ -1,0 +1,51 @@
+.navMenu{
+    /* background-color: aqua; */
+    width: 350px;
+    height: 100vh;
+    display: block;
+    justify-content: center;
+    position: fixed;
+    
+
+}
+.sideBar{
+    border: 1px solid;
+    padding: 12px;
+    color: black;
+}
+.container {
+    display: grid;
+    grid-template-columns: 20rem 70rem;
+    grid-gap: 2rem;
+    grid-auto-flow: row;
+    
+  }
+.menuBar{
+    margin-left: 2rem;
+    font-size: 2rem;
+    background:none;
+    display: block;
+
+}
+
+.navText{
+    
+padding:  8px 0px 8px 16px;
+list-style: none;
+height: 60px;
+align-items: center;
+}
+
+.navText a{
+padding: 0px 16px;
+list-style: none;
+height: 100%;
+width: 95%;
+font-size: 18px;
+align-items: center;
+color: black;
+}
+
+.item2{
+    background-color: #EFF2F7;
+}
