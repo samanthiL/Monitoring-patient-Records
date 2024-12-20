@@ -19,7 +19,7 @@ const Home = ({ role, pages }) => {
     <div className='container'>
       {/* Sidebar Section */}
       <div className="item">
-        <Sidebar setSelectedPage={setSelectedPage} />
+        <Sidebar pages ={pages} setSelectedPage={setSelectedPage} />
       </div>
 
       {/* Dynamic Content Section */}

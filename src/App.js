@@ -15,14 +15,15 @@ import AdminProfile from './pages/Admin/AdminProfile';
 import AdminDashboard from './pages/Admin/AdminDashboard';
 import Sidebar from './component/Sidebar';
 import Admin from './pages/Admin/Admin';
-import { useState } from 'react';
+import { AiFillAccountBook } from 'react-icons/ai';
 function App() {
-    const [selectedPage, setSelectedPage] = useState('Homea');
+
     const adminPages = [
-      { key: 'Appointments', component: <Appointments/> },
-      { key: 'DoctorList', component: <DoctorList/> },
-      { key: 'PatientList', component: <PatientList/>},
-      { key: 'Invoice', component: <Invoice/> },
+      { key: 'Appointments', component: <Appointments/> ,   icon: <AiFillAccountBook />
+      },
+      { key: 'DoctorList', component: <DoctorList/> , icon: <AiFillAccountBook/>},
+      { key: 'PatientList', component: <PatientList/>, icon: <AiFillAccountBook/>},
+      { key: 'Invoice', component: <Invoice/> , icon: <AiFillAccountBook/>},
 
     ];
   
@@ -46,7 +47,6 @@ function App() {
      <Router>
      <Navbar/>
      <Routes>
-<Route path="/" element={<Home />} />
 <Route path="/login" element={<Login />} />
 <Route path="/patient" element={<WithSidebar Component={Patient} />} />
 <Route path="/home" element={<Home role={role} pages={pages} />} />

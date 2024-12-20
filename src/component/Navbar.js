@@ -13,9 +13,6 @@ const Navbar = () => {
         <nav id="navbar">
         <h2 id="title"> onpatient</h2>
     <ul>
-
-
-
         <li><NavLink to="/"  className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Home</NavLink></li> 
 
         <li><NavLink to="/profile"  className={({ isActive }) => isActive ? 'nav-link active' : 'nav-link'}>Profile</NavLink></li>

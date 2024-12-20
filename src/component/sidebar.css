@@ -1,49 +1,47 @@
 .navMenu{
     /* background-color: aqua; */
-    width: 350px;
+    width: 230px;
     height: 100vh;
     display: block;
     justify-content: center;
     position: fixed;
-    
+    background-color: rgb(197, 224, 224);
+    border-radius: 10px;
 
 }
 .sideBar{
-    border: 1px solid;
     padding: 12px;
-    color: black;
 }
 .container {
     display: grid;
     grid-template-columns: 20rem 70rem;
-    grid-gap: 2rem;
+    grid-gap: 4rem;
     grid-auto-flow: row;
     
   }
 .menuBar{
-    margin-left: 2rem;
+    margin-left: 0rem;
     font-size: 2rem;
-    background:none;
-    display: block;
-
+    display: block; /* Ensure that it's a block-level container (default for ul) */
+    padding: 0; /* Remove any padding if necessary */
 }
 
 .navText{
-    
-padding:  8px 0px 8px 16px;
+padding: 2px 8px; /* Adjust padding as needed */
 list-style: none;
-height: 60px;
+display: block; /* Ensure each li item is block-level */
 align-items: center;
 }
 
 .navText a{
-padding: 0px 16px;
+padding: 1px 4px; /* Adjust padding as needed */
+text-decoration: none; /* Removes the underline from the link */
 list-style: none;
-height: 100%;
-width: 95%;
 font-size: 18px;
-align-items: center;
+text-align: left;
 color: black;
+display: flex; /* Keeps content aligned inside each link */
+align-items: center; /* Center content vertically */
 }
 
 .item2{
