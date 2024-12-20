@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Sidebar from '../../component/Sidebar';
 import Records from './Records';
+import Appointments from '../Admin/Appointments';
+import Profile from '../Admin/AdminProfile';
 
 const Patient = () => {
   const [selectedPage, setSelectedPage] = useState('Records');
@@ -17,7 +19,7 @@ const Patient = () => {
       </div>
       <div className="item2">
 
-         {selectedPage ==='Records'?(
+         {/* {selectedPage ==='Records'?(
   <Records/>
 ) :selectedPage ==='Profile'?(
            <div>This is the Profile Page.</div>
@@ -27,8 +29,19 @@ const Patient = () => {
         ): (
           <div>Page not found.</div>
         )
-      }  
+      }   */}
 
+{selectedPage ==='Appointments'?(
+  <Appointments/>
+) :selectedPage ==='Profile'?(
+<Profile/>       
+  ):selectedPage ==='Profile1'?(
+          <div>This is the Profile1 Page.</div>
+
+        ): (
+          <div>Page not found.</div>
+        )
+      }  
 
 
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const PatientList = () => {
+const AdminProfile = () => {
 
   return (
       <div className='container'>
@@ -14,4 +14,4 @@ const PatientList = () => {
   )
 }
 
-export default PatientList;
+export default AdminProfile;

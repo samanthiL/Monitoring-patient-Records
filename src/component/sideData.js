@@ -40,15 +40,23 @@ const PatientSideData = [
     
     const AdminSideData = [
         {
-            title:'Records',
-            path:'/records',
-            path1:'Records',
+            title:'Appointments',
+            path1:'Appointments',
            icon: <AiFillAccountBook />
         },
         {
-            title:'Patient profile',
-            path:'/userProfile',
-            path1:'UserProfile',
+            title:'DoctorList',
+            path1:'DoctorList',
+           icon: <AiFillAccountBook />
+        },
+        {
+            title:'Doctors',
+            path1:'Doctors',
+           icon: <AiFillAccountBook />
+        },
+        {
+            title:'Invoice',
+            path1:'Invoice',
            icon: <AiFillAccountBook />
         }
         ] 

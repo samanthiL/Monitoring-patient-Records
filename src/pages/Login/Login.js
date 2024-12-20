@@ -22,7 +22,10 @@ const Login = () => {
 
     console.log("formdata", formData)
     if (role === 'Doctor') {
-      Navigate("/doctor")
+      Navigate("/home")
+    }
+    else if (role === 'Admin') {
+      Navigate("/home")
     }
     else {
       Navigate("/patient")
@@ -34,10 +37,10 @@ const Login = () => {
     setFormData({ ...formData, [name]: value })
   }
 
-  const handleClick = (e) => {
+  const handleClick = (e,heading,newRole) => {
     e.preventDefault();
-    setHeading("Doctor Portal Login");
-    setRole('Doctor')
+    setHeading(heading);
+    setRole(newRole)
     setVisible(false);
     console.log('The link was clicked.');
   };
@@ -62,7 +65,9 @@ const Login = () => {
           </div>
           <div className="links">
             <a href="ss">Forgot password</a>
-            {visible ? <a href="dd" onClick={handleClick}>Doctor Login portal</a> : null}
+
+            {visible ? <a href="dd" onClick={(e) => handleClick(e,"Doctor Portal Login",'Doctor')}>Doctor Login portal</a> : null}
+            {visible ? <a href="dd" onClick={(e) => handleClick(e,"Admin Portal Login",'Admin')}>Admin Login portal</a> : null}
 
 
           </div>
