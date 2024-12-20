@@ -18,6 +18,8 @@ const Login = () => {
 
   const submitForm = (e) => {
     e.preventDefault();
+    localStorage.setItem("role",role)
+
     console.log("formdata", formData)
     if (role === 'Doctor') {
       Navigate("/doctor")

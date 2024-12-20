@@ -2,12 +2,7 @@ import React from 'react';
 import { AiFillAccountBook } from "react-icons/ai";
 
 const SideData = [
-{
-    title:'Dashboard',
-    path:'/patient',
-    path1:'Home',
-   icon: <AiFillAccountBook />
-},
+
 {
     title:'Appoinment',
     path:'/doctor',
@@ -21,12 +16,40 @@ const SideData = [
    icon: <AiFillAccountBook />
 },
 {
-    title:'Patient profile',
+    title:'PatientHistory',
     path:'/',
-    path1:'Settings',
+    path1:'PatientHistory',
    icon: <AiFillAccountBook />
 }
 ]
 
-
-export default SideData;
+const PatientSideData = [
+    {
+        title:'Records',
+        path:'/records',
+        path1:'Records',
+       icon: <AiFillAccountBook />
+    },
+    {
+        title:'Patient profile',
+        path:'/userProfile',
+        path1:'UserProfile',
+       icon: <AiFillAccountBook />
+    }
+    ]
+    
+    const AdminSideData = [
+        {
+            title:'Records',
+            path:'/records',
+            path1:'Records',
+           icon: <AiFillAccountBook />
+        },
+        {
+            title:'Patient profile',
+            path:'/userProfile',
+            path1:'UserProfile',
+           icon: <AiFillAccountBook />
+        }
+        ] 
+export { SideData, PatientSideData ,AdminSideData}; 
