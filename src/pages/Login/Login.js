@@ -25,10 +25,10 @@ const Login = () => {
       Navigate("/home")
     }
     else if (role === 'Admin') {
-      Navigate("/home")
+      Navigate("/Appointments")
     }
     else {
-      Navigate("/patient")
+      Navigate("/userProfile")
     }
   }
 
@@ -81,27 +81,3 @@ const Login = () => {
 }
 
 export default Login;
-
-
-
-
-{/* <div className="links">
-          <a href="#">Forgot Password?</a>
-          <a href="#">Portal Admin Login</a>
-        </div>
-        <div className="remember-me">
-          <input type="checkbox" id="rememberMe" />
-          <label htmlFor="rememberMe">Remember me?</label>
-        </div>
-
-        <button type="submit">Sign In</button> */}
-
-
-{/*
-        
-        submit button  center
-        <div className="btn">
-        <button type="submit" className="submitBtn">Submit</button>
-
-        
-        </div> */}

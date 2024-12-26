@@ -1,5 +1,4 @@
-import Navbar from './component/Navbar';
-import { BrowserRouter as Router,Routes, Route } from 'react-router-dom';  // Import Routes and Route
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Patient from './pages/Patient/Patient';
@@ -13,71 +12,53 @@ import Invoice from './pages/Admin/Invoice';
 import PatientList from './pages/Admin/PatientList';
 import AdminProfile from './pages/Admin/AdminProfile';
 import AdminDashboard from './pages/Admin/AdminDashboard';
-import Sidebar from './component/Sidebar';
 import Admin from './pages/Admin/Admin';
-import { AiFillAccountBook } from 'react-icons/ai';
-function App() {
+import { ToastContainer } from "react-toastify";
+import Layout from './Layout';
+import Dashboard from './pages/Doctor/Dashboard';
 
-    const adminPages = [
-      { key: 'Appointments', component: <Appointments/> ,   icon: <AiFillAccountBook />
-      },
-      { key: 'DoctorList', component: <DoctorList/> , icon: <AiFillAccountBook/>},
-      { key: 'PatientList', component: <PatientList/>, icon: <AiFillAccountBook/>},
-      { key: 'Invoice', component: <Invoice/> , icon: <AiFillAccountBook/>},
-
-    ];
-  
-    const doctorPages = [
-      { key: 'Appoinment', component: <Appointments /> },
-      { key: 'Profile', component: <Login /> },
-      { key: 'Records', component: <Records /> },
-    ];
-  
-    const patientPages = [
-      { key: 'UserProfile', component: <div>This is the User Profile Page.</div> },
-      { key: 'MedicalHistory', component: <div>This is the Medical History Page.</div> },
-    ];
-  
-    // Role-specific configuration based on route or localStorage
-    const role = localStorage.getItem('role') // Replace with your role logic
-    const pages = role === 'Admin' ? adminPages : role === 'Doctor' ? doctorPages : patientPages;
-  
+const App = () => {
   return (
-    <div className="App">
-     <Router>
-     <Navbar/>
-     <Routes>
-<Route path="/login" element={<Login />} />
-<Route path="/patient" element={<WithSidebar Component={Patient} />} />
-<Route path="/home" element={<Home role={role} pages={pages} />} />
+    <Router>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover />
 
-<Route path="/doctor" element={<WithSidebar Component={Doctor}/>} />
-<Route path="/doctor" element={<Doctor/>} />
-<Route path="/userProfile" element={<UserProfile/>} />
-<Route path="/records" element={<Records/>} />
-<Route path="/admin" element={<WithSidebar Component={Admin} />} />
+      <Routes>
 
-{/* admin routes */}
-<Route path="/appointments" element={<Appointments/>} />
-<Route path="/doctorList" element={<DoctorList/>} />
-<Route path="/invoice" element={<Invoice/>} />
-<Route path="/patientList" element={<PatientList/>} />
-<Route path="/adminProfile" element={<AdminProfile/>} />
-<Route path="/adminDashboard" element={<AdminDashboard/>} />
+        <Route path="/" element={<Login />} />
+        <Route
+          path="*"
+          element={
+            <Layout>
+              <Routes>
+                <Route path="/doctor" element={<Doctor />} />
+                <Route path="/userProfile" element={<UserProfile />} />
+                <Route path="/records" element={<Records />} />
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/appointments" element={<Appointments />} />
+                <Route path="/doctorList" element={<DoctorList />} />
+                <Route path="/patientList" element={<PatientList />} />
+                <Route path="/invoice" element={<Invoice />} />
+                <Route path="/adminProfile" element={<AdminProfile />} />
+                <Route path="/admin" element={<Admin />} />
+                <Route path="/patient" element={<Patient />} />
+                <Route path="/adminDashboard" element={<AdminDashboard />} />
+                <Route path="/home" element={<Home />} />
 
-</Routes>
-     </Router>
-
-    </div>
+              </Routes>
+            </Layout>
+          }
+        />
+      </Routes>
+    </Router>
   );
-}
-
-
-const WithSidebar = ({ Component }) => (
-  <>
-    <Sidebar />
-    <Component />
-  </>
-);
-
+};
 export default App;
