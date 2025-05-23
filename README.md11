@@ -1,0 +1,36 @@
+This project is a Full Stack Doctor Appointment Booking System built using the MERN stack – MongoDB, Express.js, React.js, and Node.js. It is a complete web application that allows patients to book appointments with doctors, doctors to manage appointments and earnings, and administrators to oversee the entire system.
+
+🚀 Features
+Three-Level Authentication System:
+
+Patient Dashboard: Patients can sign up, log in, book appointments with doctors, view their appointments, and manage them easily.
+
+Doctor Dashboard: Doctors can log in to view their appointments, earnings, and update their profile.
+
+Admin Dashboard: Admins have full control over the system including managing doctors and viewing all appointments.
+
+Online Payment Integration:
+
+Patients can pay their appointment fees directly through the application via integrated online payment gateways.
+
+Responsive UI:
+
+The front end is built with React.js to provide a smooth and responsive user experience on all devices.
+
+🎓 Ideal For
+College or academic projects
+
+Personal portfolio to demonstrate full stack development skills
+
+Resume enhancement for aspiring MERN developers
+
+🛠️ Technologies Used
+Frontend: React.js
+
+Backend: Node.js, Express.js
+
+Database: MongoDB
+
+Authentication: JWT (JSON Web Tokens)
+
+Payment Gateway: (Add the one you're using, e.g., Stripe or Razorpay)
